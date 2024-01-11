@@ -1278,30 +1278,6 @@ End Namespace
                         <dimName></dimName>
                         <memberFilter></memberFilter>
                     </parameter>
-                    <parameter name="SelectUD6Dim_OP_DA" description="" userPrompt="" parameterType="BoundList" sortOrder="0">
-                        <defaultValue></defaultValue>
-                        <resultFormatStringType>Default</resultFormatStringType>
-                        <resultCustomFormatString></resultCustomFormatString>
-                        <parameterCommandType>SQL</parameterCommandType>
-                        <sqlQuery>SELECT ' ' as Name
-UNION
-SELECT Name
-FROM Dim WITH (NOLOCK)
-WHERE DimTypeId = 14</sqlQuery>
-                        <dbLocation>Application</dbLocation>
-                        <externalDBConnName></externalDBConnName>
-                        <methodType>Unknown</methodType>
-                        <methodQuery></methodQuery>
-                        <resultsTableName>dt</resultsTableName>
-                        <displayMember>Name</displayMember>
-                        <valueMember>Name</valueMember>
-                        <displayItems></displayItems>
-                        <valueItems></valueItems>
-                        <cubeName></cubeName>
-                        <dimType></dimType>
-                        <dimName></dimName>
-                        <memberFilter></memberFilter>
-                    </parameter>
                     <parameter name="SelectUD2_OP_DA" description="" userPrompt="" parameterType="InputValue" sortOrder="0">
                         <defaultValue></defaultValue>
                         <resultFormatStringType>Default</resultFormatStringType>
@@ -1355,30 +1331,6 @@ WHERE DimTypeId = 14</sqlQuery>
                         <resultsTableName></resultsTableName>
                         <displayMember></displayMember>
                         <valueMember></valueMember>
-                        <displayItems></displayItems>
-                        <valueItems></valueItems>
-                        <cubeName></cubeName>
-                        <dimType></dimType>
-                        <dimName></dimName>
-                        <memberFilter></memberFilter>
-                    </parameter>
-                    <parameter name="SelectUD3Dim_OP_DA" description="" userPrompt="" parameterType="BoundList" sortOrder="0">
-                        <defaultValue></defaultValue>
-                        <resultFormatStringType>Default</resultFormatStringType>
-                        <resultCustomFormatString></resultCustomFormatString>
-                        <parameterCommandType>SQL</parameterCommandType>
-                        <sqlQuery>SELECT ' ' as Name
-UNION
-SELECT Name
-FROM Dim WITH (NOLOCK)
-WHERE DimTypeId = 11</sqlQuery>
-                        <dbLocation>Application</dbLocation>
-                        <externalDBConnName></externalDBConnName>
-                        <methodType>Unknown</methodType>
-                        <methodQuery></methodQuery>
-                        <resultsTableName>dt</resultsTableName>
-                        <displayMember>Name</displayMember>
-                        <valueMember>Name</valueMember>
                         <displayItems></displayItems>
                         <valueItems></valueItems>
                         <cubeName></cubeName>
@@ -1746,30 +1698,6 @@ WHERE DimTypeId = 11</sqlQuery>
                         <dimName></dimName>
                         <memberFilter></memberFilter>
                     </parameter>
-                    <parameter name="SelectUD1Dim_OP_DA" description="" userPrompt="" parameterType="BoundList" sortOrder="0">
-                        <defaultValue></defaultValue>
-                        <resultFormatStringType>Default</resultFormatStringType>
-                        <resultCustomFormatString></resultCustomFormatString>
-                        <parameterCommandType>SQL</parameterCommandType>
-                        <sqlQuery>SELECT ' ' as Name
-UNION
-SELECT Name
-FROM Dim WITH (NOLOCK)
-WHERE DimTypeId = 9</sqlQuery>
-                        <dbLocation>Application</dbLocation>
-                        <externalDBConnName></externalDBConnName>
-                        <methodType>Unknown</methodType>
-                        <methodQuery></methodQuery>
-                        <resultsTableName>dt</resultsTableName>
-                        <displayMember>Name</displayMember>
-                        <valueMember>Name</valueMember>
-                        <displayItems></displayItems>
-                        <valueItems></valueItems>
-                        <cubeName></cubeName>
-                        <dimType></dimType>
-                        <dimName></dimName>
-                        <memberFilter></memberFilter>
-                    </parameter>
                     <parameter name="IsSettingsPage_OP_DAS" description="" userPrompt="" parameterType="LiteralValue" sortOrder="0">
                         <defaultValue>False</defaultValue>
                         <resultFormatStringType>Default</resultFormatStringType>
@@ -1863,54 +1791,6 @@ WHERE DimTypeId = 9</sqlQuery>
                         <resultsTableName></resultsTableName>
                         <displayMember></displayMember>
                         <valueMember></valueMember>
-                        <displayItems></displayItems>
-                        <valueItems></valueItems>
-                        <cubeName></cubeName>
-                        <dimType></dimType>
-                        <dimName></dimName>
-                        <memberFilter></memberFilter>
-                    </parameter>
-                    <parameter name="SelectUD7Dim_OP_DA" description="" userPrompt="" parameterType="BoundList" sortOrder="0">
-                        <defaultValue></defaultValue>
-                        <resultFormatStringType>Default</resultFormatStringType>
-                        <resultCustomFormatString></resultCustomFormatString>
-                        <parameterCommandType>SQL</parameterCommandType>
-                        <sqlQuery>SELECT ' ' as Name
-UNION
-SELECT Name
-FROM Dim WITH (NOLOCK)
-WHERE DimTypeId = 15</sqlQuery>
-                        <dbLocation>Application</dbLocation>
-                        <externalDBConnName></externalDBConnName>
-                        <methodType>Unknown</methodType>
-                        <methodQuery></methodQuery>
-                        <resultsTableName>dt</resultsTableName>
-                        <displayMember>Name</displayMember>
-                        <valueMember>Name</valueMember>
-                        <displayItems></displayItems>
-                        <valueItems></valueItems>
-                        <cubeName></cubeName>
-                        <dimType></dimType>
-                        <dimName></dimName>
-                        <memberFilter></memberFilter>
-                    </parameter>
-                    <parameter name="SelectUD8Dim_OP_DA" description="" userPrompt="" parameterType="BoundList" sortOrder="0">
-                        <defaultValue></defaultValue>
-                        <resultFormatStringType>Default</resultFormatStringType>
-                        <resultCustomFormatString></resultCustomFormatString>
-                        <parameterCommandType>SQL</parameterCommandType>
-                        <sqlQuery>SELECT ' ' as Name
-UNION
-SELECT Name
-FROM Dim WITH (NOLOCK)
-WHERE DimTypeId = 16</sqlQuery>
-                        <dbLocation>Application</dbLocation>
-                        <externalDBConnName></externalDBConnName>
-                        <methodType>Unknown</methodType>
-                        <methodQuery></methodQuery>
-                        <resultsTableName>dt</resultsTableName>
-                        <displayMember>Name</displayMember>
-                        <valueMember>Name</valueMember>
                         <displayItems></displayItems>
                         <valueItems></valueItems>
                         <cubeName></cubeName>
@@ -2086,30 +1966,6 @@ WHERE DimTypeId = 0</sqlQuery>
                         <dimName></dimName>
                         <memberFilter></memberFilter>
                     </parameter>
-                    <parameter name="SelectUD5Dim_OP_DA" description="" userPrompt="" parameterType="BoundList" sortOrder="0">
-                        <defaultValue></defaultValue>
-                        <resultFormatStringType>Default</resultFormatStringType>
-                        <resultCustomFormatString></resultCustomFormatString>
-                        <parameterCommandType>SQL</parameterCommandType>
-                        <sqlQuery>SELECT ' ' as Name
-UNION
-SELECT Name
-FROM Dim WITH (NOLOCK)
-WHERE DimTypeId = 13</sqlQuery>
-                        <dbLocation>Application</dbLocation>
-                        <externalDBConnName></externalDBConnName>
-                        <methodType>Unknown</methodType>
-                        <methodQuery></methodQuery>
-                        <resultsTableName>dt</resultsTableName>
-                        <displayMember>Name</displayMember>
-                        <valueMember>Name</valueMember>
-                        <displayItems></displayItems>
-                        <valueItems></valueItems>
-                        <cubeName></cubeName>
-                        <dimType></dimType>
-                        <dimName></dimName>
-                        <memberFilter></memberFilter>
-                    </parameter>
                     <parameter name="SelectAccountDim_OP_DA" description="" userPrompt="" parameterType="BoundList" sortOrder="0">
                         <defaultValue></defaultValue>
                         <resultFormatStringType>Default</resultFormatStringType>
@@ -2120,30 +1976,6 @@ UNION
 SELECT Name
 FROM Dim WITH (NOLOCK)
 WHERE DimTypeId = 5</sqlQuery>
-                        <dbLocation>Application</dbLocation>
-                        <externalDBConnName></externalDBConnName>
-                        <methodType>Unknown</methodType>
-                        <methodQuery></methodQuery>
-                        <resultsTableName>dt</resultsTableName>
-                        <displayMember>Name</displayMember>
-                        <valueMember>Name</valueMember>
-                        <displayItems></displayItems>
-                        <valueItems></valueItems>
-                        <cubeName></cubeName>
-                        <dimType></dimType>
-                        <dimName></dimName>
-                        <memberFilter></memberFilter>
-                    </parameter>
-                    <parameter name="SelectUD2Dim_OP_DA" description="" userPrompt="" parameterType="BoundList" sortOrder="0">
-                        <defaultValue></defaultValue>
-                        <resultFormatStringType>Default</resultFormatStringType>
-                        <resultCustomFormatString></resultCustomFormatString>
-                        <parameterCommandType>SQL</parameterCommandType>
-                        <sqlQuery>SELECT ' ' as Name
-UNION
-SELECT Name
-FROM Dim WITH (NOLOCK)
-WHERE DimTypeId = 10</sqlQuery>
                         <dbLocation>Application</dbLocation>
                         <externalDBConnName></externalDBConnName>
                         <methodType>Unknown</methodType>
@@ -2193,30 +2025,6 @@ WHERE DimTypeId = 10</sqlQuery>
                         <valueMember></valueMember>
                         <displayItems>Home, Settings, Help</displayItems>
                         <valueItems>3_Content_OP_DAM, 0_Settings_OP_DAS, 0_Help_OP_DAH</valueItems>
-                        <cubeName></cubeName>
-                        <dimType></dimType>
-                        <dimName></dimName>
-                        <memberFilter></memberFilter>
-                    </parameter>
-                    <parameter name="SelectUD4Dim_OP_DA" description="" userPrompt="" parameterType="BoundList" sortOrder="0">
-                        <defaultValue></defaultValue>
-                        <resultFormatStringType>Default</resultFormatStringType>
-                        <resultCustomFormatString></resultCustomFormatString>
-                        <parameterCommandType>SQL</parameterCommandType>
-                        <sqlQuery>SELECT ' ' as Name
-UNION
-SELECT Name
-FROM Dim WITH (NOLOCK)
-WHERE DimTypeId = 12</sqlQuery>
-                        <dbLocation>Application</dbLocation>
-                        <externalDBConnName></externalDBConnName>
-                        <methodType>Unknown</methodType>
-                        <methodQuery></methodQuery>
-                        <resultsTableName>dt</resultsTableName>
-                        <displayMember>Name</displayMember>
-                        <valueMember>Name</valueMember>
-                        <displayItems></displayItems>
-                        <valueItems></valueItems>
                         <cubeName></cubeName>
                         <dimType></dimType>
                         <dimName></dimName>
@@ -3076,38 +2884,6 @@ ORDER BY
                     </component>
                     <component name="cbx_SettingManageSecurity_OP_DAS" description="" xfText="" toolTip="" componentType="ComboBox" boundParameterName="SettingManageSecurity_OP_DAS" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
                         <displayFormat>|!fmt_ComboBoxNoLabel_OP_DA!|</displayFormat>
-                        <adapterMembers />
-                    </component>
-                    <component name="cbx_UD1Dim_OP_DA" description="" xfText="UD1 Dim" toolTip="" componentType="ComboBox" boundParameterName="SelectUD1Dim_OP_DA" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
-                        <displayFormat>HorizontalAlignment = Left, LabelFontSize = 12, LabelPosition = Top, LabelTextColor = XFReadOnlyText, MarginBottom = 2, MarginLeft = 5, MarginTop = 2, VerticalAlignment = Center, Width = 150</displayFormat>
-                        <adapterMembers />
-                    </component>
-                    <component name="cbx_UD2Dim_OP_DA" description="" xfText="UD2 Dim" toolTip="" componentType="ComboBox" boundParameterName="SelectUD2Dim_OP_DA" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
-                        <displayFormat>HorizontalAlignment = Left, LabelFontSize = 12, LabelPosition = Top, LabelTextColor = XFReadOnlyText, MarginBottom = 2, MarginLeft = 5, MarginTop = 2, VerticalAlignment = Center, Width = 150</displayFormat>
-                        <adapterMembers />
-                    </component>
-                    <component name="cbx_UD3Dim_OP_DA" description="" xfText="UD3 Dim" toolTip="" componentType="ComboBox" boundParameterName="SelectUD3Dim_OP_DA" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
-                        <displayFormat>HorizontalAlignment = Left, LabelFontSize = 12, LabelPosition = Top, LabelTextColor = XFReadOnlyText, MarginBottom = 2, MarginLeft = 5, MarginTop = 2, VerticalAlignment = Center, Width = 150</displayFormat>
-                        <adapterMembers />
-                    </component>
-                    <component name="cbx_UD4Dim_OP_DA" description="" xfText="UD4 Dim" toolTip="" componentType="ComboBox" boundParameterName="SelectUD4Dim_OP_DA" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
-                        <displayFormat>HorizontalAlignment = Left, LabelFontSize = 12, LabelPosition = Top, LabelTextColor = XFReadOnlyText, MarginBottom = 2, MarginLeft = 5, MarginTop = 2, VerticalAlignment = Center, Width = 150</displayFormat>
-                        <adapterMembers />
-                    </component>
-                    <component name="cbx_UD5Dim_OP_DA" description="" xfText="UD5 Dim" toolTip="" componentType="ComboBox" boundParameterName="SelectUD5Dim_OP_DA" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
-                        <displayFormat>HorizontalAlignment = Left, LabelFontSize = 12, LabelPosition = Top, LabelTextColor = XFReadOnlyText, MarginBottom = 2, MarginLeft = 5, MarginTop = 2, VerticalAlignment = Center, Width = 150</displayFormat>
-                        <adapterMembers />
-                    </component>
-                    <component name="cbx_UD6Dim_OP_DA" description="" xfText="UD6 Dim" toolTip="" componentType="ComboBox" boundParameterName="SelectUD6Dim_OP_DA" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
-                        <displayFormat>HorizontalAlignment = Left, LabelFontSize = 12, LabelPosition = Top, LabelTextColor = XFReadOnlyText, MarginBottom = 2, MarginLeft = 5, MarginTop = 2, VerticalAlignment = Center, Width = 150</displayFormat>
-                        <adapterMembers />
-                    </component>
-                    <component name="cbx_UD7Dim_OP_DA" description="" xfText="UD7 Dim" toolTip="" componentType="ComboBox" boundParameterName="SelectUD7Dim_OP_DA" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
-                        <displayFormat>HorizontalAlignment = Left, LabelFontSize = 12, LabelPosition = Top, LabelTextColor = XFReadOnlyText, MarginBottom = 2, MarginLeft = 5, MarginTop = 2, VerticalAlignment = Center, Width = 150</displayFormat>
-                        <adapterMembers />
-                    </component>
-                    <component name="cbx_UD8Dim_OP_DA" description="" xfText="UD8 Dim" toolTip="" componentType="ComboBox" boundParameterName="SelectUD8Dim_OP_DA" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
-                        <displayFormat>HorizontalAlignment = Left, LabelFontSize = 12, LabelPosition = Top, LabelTextColor = XFReadOnlyText, MarginBottom = 2, MarginLeft = 5, MarginTop = 2, VerticalAlignment = Center, Width = 150</displayFormat>
                         <adapterMembers />
                     </component>
                     <component name="cbx_User_OP_DA" description="" xfText="User" toolTip="" componentType="ComboBox" boundParameterName="User_OP_DA" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="NoAction">
