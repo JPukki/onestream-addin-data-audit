@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OneStreamXF version="6.8.1.13230">
+    <extensibilityRulesRoot>
+        <businessRule businessRuleType="Extender" name="OP_DA_DataMgmt">
+            <accessGroup>Everyone</accessGroup>
+            <maintenanceGroup>Everyone</maintenanceGroup>
+            <isGlobal>false</isGlobal>
+            <isEncrypted>false</isEncrypted>
+            <referencedAssemblies>
+                <referencedAssembly isInBusinessRulesAssemblyFolder="false" isOtherBusinessRule="true" isInEnvironmentSpecialFolder="false" environmentSpecialFolder="" assemblyName="OP_DA_SolutionHelper" />
+            </referencedAssemblies>
+            <sourceCode><![CDATA[Imports System
+Imports System.Data
+Imports System.Data.Common
+Imports System.IO
+Imports System.Collections.Generic
+Imports System.Globalization
+Imports System.Linq
+Imports Microsoft.VisualBasic
+Imports System.Windows.Forms
+Imports OneStream.Shared.Common
+Imports OneStream.Shared.Wcf
+Imports OneStream.Shared.Engine
+Imports OneStream.Shared.Database
+Imports OneStream.Stage.Engine
+Imports OneStream.Stage.Database
+Imports OneStream.Finance.Engine
+Imports OneStream.Finance.Database
+
+Namespace OneStream.BusinessRule.Extender.OP_DA_DataMgmt
+	Public Class MainClass
+		Public Function Main(ByVal si As SessionInfo, ByVal globals As BRGlobals, ByVal api As Object, ByVal args As ExtenderArgs) As Object
+			Try
+				Select Case args.FunctionType
+						
+					Case Is = ExtenderFunctionType.ExecuteDataMgmtBusinessRuleStep
+						Dim solutionHelper As New OneStream.BusinessRule.DashboardExtender.OP_DA_SolutionHelper.MainClass
+						Dim dt As Datatable = solutionHelper.GetDataAuditTable(si, args.NameValuePairs, True)
+						ExtractCsvFileInBackground(si, dt)
+						
+				End Select
+
+				Return Nothing
+			Catch ex As Exception
+				Throw ErrorHandler.LogWrite(si, New XFException(si, ex))
+			End Try
+		End Function
+		
+        Public Sub ExtractCsvFileInBackground(si As SessionInfo, dt As DataTable)
+            Try
+				Dim filesAsString As New StringBuilder()
+				
+				'Determine delimiter based on user culture.
+				Dim delimiter As String = CultureInfo.CurrentCulture.TextInfo.ListSeparator
+				
+				'Headers.
+				filesAsString.AppendLine(String.Join(delimiter, dt.Columns.Cast(Of DataColumn).Select(Function(x) x.ColumnName)))
+				
+				'Data rows.
+				For Each dr As DataRow In dt.Rows
+					filesAsString.AppendLine(String.Join(delimiter, dr.ItemArray()))
+				Next dr
+				
+				Dim fileAsByte() As Byte = System.Text.Encoding.Unicode.GetBytes(filesAsString.ToString)
+				
+				'Set output location to user's personal folder.
+				Dim filePath As String = $"Documents/Users/{StringHelper.RemoveSystemCharacters(si.UserName,False,False)}"
+				Dim fileName As String = "DataAudit_Extract.csv"
+				Dim XFFileDataInfo As New XFFileInfo(FileSystemLocation.ApplicationDatabase, fileName, filePath)
+				Dim XFFileData As New XFFile(XFFileDataInfo, String.Empty, fileAsByte)
+				BRApi.FileSystem.InsertOrUpdateFile(si, XFFileData)
+				
+			Catch ex As Exception
+				Throw ErrorHandler.LogWrite(si, New XFException(si, ex))
+			End Try
+        End Sub
+	End Class
+End Namespace
+]]></sourceCode>
+        </businessRule>
+    </extensibilityRulesRoot>
+</OneStreamXF>

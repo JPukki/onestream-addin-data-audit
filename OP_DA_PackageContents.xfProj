@@ -1,0 +1,11 @@
+<xfProject topFolderPath="" defaultZipFileName="OP_DA_PV680_SV100_PackageContents">
+    <projectItems>
+        <projectItem projectItemType="BusinessRule" folderPath="" name="OP_DA_HelperQueries" includeDescendants="true" />
+        <projectItem projectItemType="BusinessRule" folderPath="" name="OP_DA_SolutionHelper" includeDescendants="true" />
+        <projectItem projectItemType="BusinessRule" folderPath="" name="OP_DA_ParamHelper" includeDescendants="true" />
+		<projectItem projectItemType="BusinessRule" folderPath="" name="OP_DA_DataMgmt" includeDescendants="true" />
+        <projectItem projectItemType="DashboardMaintenanceUnit" folderPath="" name="Data Audit (OP_DA)" includeDescendants="true" />
+        <projectItem projectItemType="DashboardProfile" folderPath="" name="Data Audit (OP_DA)" includeDescendants="true" />
+		<projectItem projectItemType="DataManagementGroup" folderPath="" name="Data Audit (OP_DA)" includeDescendants="true" />
+    </projectItems>
+</xfProject>
