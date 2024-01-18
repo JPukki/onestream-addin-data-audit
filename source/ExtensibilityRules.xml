@@ -36,7 +36,7 @@ Namespace OneStream.BusinessRule.Extender.OP_DA_DataMgmt
 					Case Is = ExtenderFunctionType.ExecuteDataMgmtBusinessRuleStep
 						Dim solutionHelper As New OneStream.BusinessRule.DashboardExtender.OP_DA_SolutionHelper.MainClass
 						Dim dt As Datatable = solutionHelper.GetDataAuditTable(si, args.NameValuePairs, True)
-						ExtractCsvFileInBackground(si, dt)
+						ExtractCsvFileInBackground(si, dt, args.NameValuePairs)
 						
 				End Select
 
@@ -46,12 +46,36 @@ Namespace OneStream.BusinessRule.Extender.OP_DA_DataMgmt
 			End Try
 		End Function
 		
-        Public Sub ExtractCsvFileInBackground(si As SessionInfo, dt As DataTable)
+        Public Sub ExtractCsvFileInBackground(si As SessionInfo, dt As DataTable, customSubstVars As Dictionary(Of String, String))
             Try
 				Dim filesAsString As New StringBuilder()
 				
 				'Determine delimiter based on user culture.
 				Dim delimiter As String = CultureInfo.CurrentCulture.TextInfo.ListSeparator
+				
+				'Filters.
+				filesAsString.AppendLine(String.Join(delimiter, {"Start Date Filter", customSubstVars.XFGetValue("AuditStartDate_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"End Date Filter", customSubstVars.XFGetValue("AuditEndDate_OP_DA")}))
+				filesAsString.AppendLine(String.Join(delimiter, {"User Filter", customSubstVars.XFGetValue("User_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"Cube Filter", customSubstVars.XFGetValue("SelectCube_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"Entity Filter", customSubstVars.XFGetValue("SelectEntity_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"Cons Filter", customSubstVars.XFGetValue("SelectCons_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"Scenario Filter", customSubstVars.XFGetValue("SelectScenario_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"Time Filter", customSubstVars.XFGetValue("SelectTime_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"View Filter", customSubstVars.XFGetValue("SelectView_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"Account Filter", customSubstVars.XFGetValue("SelectAccount_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"Flow Filter", customSubstVars.XFGetValue("SelectFlow_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"Origin Filter", customSubstVars.XFGetValue("SelectOrigin_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"IC Filter", customSubstVars.XFGetValue("SelectIC_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"UD1 Filter", customSubstVars.XFGetValue("SelectUD1_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"UD2 Filter", customSubstVars.XFGetValue("SelectUD2_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"UD3 Filter", customSubstVars.XFGetValue("SelectUD3_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"UD4 Filter", customSubstVars.XFGetValue("SelectUD4_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"UD5 Filter", customSubstVars.XFGetValue("SelectUD5_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"UD6 Filter", customSubstVars.XFGetValue("SelectUD6_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"UD7 Filter", customSubstVars.XFGetValue("SelectUD7_OP_DA")}))
+                filesAsString.AppendLine(String.Join(delimiter, {"UD8 Filter", customSubstVars.XFGetValue("SelectUD8_OP_DA")}))
+				filesAsString.AppendLine()
 				
 				'Headers.
 				filesAsString.AppendLine(String.Join(delimiter, dt.Columns.Cast(Of DataColumn).Select(Function(x) x.ColumnName)))
@@ -65,7 +89,7 @@ Namespace OneStream.BusinessRule.Extender.OP_DA_DataMgmt
 				
 				'Set output location to user's personal folder.
 				Dim filePath As String = $"Documents/Users/{StringHelper.RemoveSystemCharacters(si.UserName,False,False)}"
-				Dim fileName As String = "DataAudit_Extract.csv"
+				Dim fileName As String = $"DataAudit_Extract_{DateTime.Now.ToString("yyyyMMddHHmmss")}.csv"
 				Dim XFFileDataInfo As New XFFileInfo(FileSystemLocation.ApplicationDatabase, fileName, filePath)
 				Dim XFFileData As New XFFile(XFFileDataInfo, String.Empty, fileAsByte)
 				BRApi.FileSystem.InsertOrUpdateFile(si, XFFileData)
