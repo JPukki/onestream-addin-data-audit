@@ -2608,7 +2608,7 @@ ORDER BY
                     </component>
                     <component name="btn_AuthorLink_OP_DA" description="" xfText="Github" toolTip="" componentType="Button" boundParameterName="" paramValueForButtonClick="" applyParamValueToCurrentDbrd="true" selectionChangedSaveType="NoAction" selectionChangedPovActionType="NoAction" selectionChangedTaskType="NoTask" selectionChangedUIActionType="NoAction" selectionChangedNavigationType="OpenWebSite">
                         <displayFormat>MarginLeft = 5, MarginRight = 5</displayFormat>
-                        <selectionChangedNavigationArgs>UrlOrFullFileName=[https://github.com/JPukki?tab=repositories]</selectionChangedNavigationArgs>
+                        <selectionChangedNavigationArgs>UrlOrFullFileName=[https://github.com/JPukki/onestream-addin-data-audit]</selectionChangedNavigationArgs>
                         <componentDefinition>
                             <XFButtonDefinition ButtonType="Standard">
                                 <ImageFileSourceType>Unknown</ImageFileSourceType>
