@@ -2,8 +2,8 @@
 <OneStreamXF version="6.8.1.13230">
     <extensibilityRulesRoot>
         <businessRule businessRuleType="Extender" name="OP_DA_DataMgmt">
-            <accessGroup>Everyone</accessGroup>
-            <maintenanceGroup>Everyone</maintenanceGroup>
+            <accessGroup>Administrators</accessGroup>
+            <maintenanceGroup>Administrators</maintenanceGroup>
             <isGlobal>false</isGlobal>
             <isEncrypted>false</isEncrypted>
             <referencedAssemblies>

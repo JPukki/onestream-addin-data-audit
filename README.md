@@ -4,7 +4,7 @@
 - Filter by date, user, or any POV dimensions using member filter syntax
 - Export data as .csv
 
-**IMPORTANT: The solution queries the data entry audit table directly. It does NOT check if the user has access to the data in the audit table. Limit access to administrators.**
+**The solution queries the data entry audit table directly. It checks if the user has access to the data cell using an unpublished API. Test in a development environment before granting access to non-admins.**
 
 ## Install
 
@@ -32,4 +32,8 @@
 
 ## Sign up for updates
 
-[Google Forms mail list signup](https://forms.gle/L6DjYBXX34FUS8FDA)
+If you find the solution useful, please sign up for the [mail list](https://forms.gle/L6DjYBXX34FUS8FDA) to get info on updates and new solutions.
+
+## Also check out
+
+- [Metadata Load Enhanced](https://github.com/JPukki/onestream-addin-metadata-load-enhanced)
